@@ -1,0 +1,100 @@
+﻿
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Info windows Street View side-by-side</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map, #pano {
+        float: left;
+        height: 100%;
+        width: 45%;
+		}
+    </style>
+	<script type=”javascript”>
+	Materialize.toast('使用方法', 4000);
+    </script>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+  
+  <nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">導覽小天使</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="作業測試.html">首頁</a></li>
+    </ul>
+  </div>
+</nav>
+ 
+     <div id="map"></div>
+	 <div id="pano"></div>
+    <script>
+function initMap() {
+  var museum = {lat: 24.15768331261679, lng: 120.66672978073893};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center: museum
+  });
+
+    var panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('pano'), {
+        position: museum,
+        pov: {
+          heading: 233.73718219994544,
+          pitch: 	11.996424894970275
+        }
+      });
+  map.setStreetView(panorama);
+  
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">自然科學科博館</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>科博館</b>，台中<b>唯一</b>的遊玩地點，幼稚園和國小生的天堂、國中生幾乎不會去的地方、高中生懷念的地方、以及本地大學生約會勝地外加外地觀光客旅遊勝地。' +
+      '實在很不得了啊。ㄎㄎ</p>'+
+      '<p>地址: 臺中市北區館前路一號, <a href="http://www.nmns.edu.tw/">'+
+      'http://www.nmns.edu.tw/</a></p> '+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker = new google.maps.Marker({
+    position: {lat: 24.157259, lng: 120.666585},
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}
+
+
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+   <div id="floating-panel"><a class="btn" onclick="Materialize.toast('拖移黃色小人，走到你喜歡的地方吧!!', 4000)">小天使告訴你</a></div>
+
+    </body>
+  </html>
