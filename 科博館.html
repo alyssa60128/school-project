@@ -47,7 +47,17 @@
 	 <div id="pano"></div>
     <script>
 function initMap() {
-  var museum = {lat: 24.15768331261679, lng: 120.66672978073893};
+  var museum = {lat: 24.15768331261679, lng: 120.66672978073893};  //科博館
+  var museum2 = {lat: 24.158076, lng: 120.667621};                 //植物園
+  var museum3 = {lat: 24.157840, lng: 120.667489};                 //水鐘
+  var museum4 = {lat: 24.156602, lng: 120.666461};                 //生命科學廳
+  var museum5 = {lat: 24.156670, lng: 120.666868};                 //恐龍廳
+  var museum6 = {lat: 24.156012, lng: 120.666989};                 //科學中心與太空劇場
+  var museum7 = {lat: 24.156957, lng: 120.665589};                 //人類文化廳
+  var museum8 = {lat: 24.157334, lng: 120.666274};                 //環境劇場
+  var museum9 = {lat: 24.157918, lng: 120.665572};                 //地球環境廳
+  var museum10 = {lat: 24.156376, lng: 120.667613};                 //DNA模型
+  var museum11 = {lat: 24.157946, lng: 120.666395};                 //自然學友之家與立體劇場
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
     center: museum
@@ -58,7 +68,7 @@ function initMap() {
         position: museum,
         pov: {
           heading: 233.73718219994544,
-          pitch: 	11.996424894970275
+          pitch: 11.996424894970275
         }
       });
   map.setStreetView(panorama);
@@ -69,7 +79,7 @@ function initMap() {
       '<h1 id="firstHeading" class="firstHeading">自然科學科博館</h1>'+
       '<div id="bodyContent">'+
       '<p><b>科博館</b>，台中<b>唯一</b>的遊玩地點，幼稚園和國小生的天堂、國中生幾乎不會去的地方、高中生懷念的地方、以及本地大學生約會勝地外加外地觀光客旅遊勝地。' +
-      '實在很不得了啊。ㄎㄎ</p>'+
+      '</p>'+
       '<p>地址: 臺中市北區館前路一號, <a href="http://www.nmns.edu.tw/">'+
       'http://www.nmns.edu.tw/</a></p> '+
       '</div>'+
@@ -86,6 +96,242 @@ function initMap() {
   });
   marker.addListener('click', function() {
     infowindow.open(map, marker);
+  });
+
+  var infowindow2 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker2 = new google.maps.Marker({
+    position: museum2,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker2.addListener('click', function() {
+    infowindow2.open(map, marker2);
+  });
+  
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">水鐘</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>水鐘</b>，停車場旁邊，很漂亮的鐘。' +
+      '</p>'+
+      '<p>常常被小朋友們圍繞，尤其是快整點的時候。'+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow3 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker3 = new google.maps.Marker({
+    position: museum3,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker3.addListener('click', function() {
+    infowindow3.open(map, marker3);
+  });
+  
+        var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">生命科學廳</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>生命科學廳</b>，主要展覽區，每年都會有一次特展。' +
+      '</p>'+
+      '<p>現在這裡有一個超好玩的腦袋展，旁邊則是永遠不變的恐龍廳、生老病死展和麥當勞。原本的服務中心以前是遊戲區，有一個模擬輕功的遊戲超好玩的，好想念它。'+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow4 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker4 = new google.maps.Marker({
+    position: museum4,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker4.addListener('click', function() {
+    infowindow4.open(map, marker4);
+  });
+  
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">恐龍廳</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>萬年不變恐龍廳</b>，相信這是很多人的童年。' +
+      '</p>'+
+      '<p>這邊的主題為生命的演化，後面緊接一個生老病死展覽，裡面還有木乃伊喔。小時後去覺得挺好玩的，現在再去反而覺得恐怖恐怖的.....'+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow5 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker5 = new google.maps.Marker({
+    position: museum5,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker5.addListener('click', function() {
+    infowindow5.open(map, marker5);
+  });
+  
+        var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">科學中心與太空劇場</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>太空劇場</b>，影片開始播放前會先教你認識星星，小時候還喜歡坐在星象儀旁邊，影片開始播放時它還會沉下去。可是現在變成普通的投影機了。' +
+      '</p>'+
+      '<p><b>科學中心</b>地下室原有很多好玩的遊戲，可是都被收起來了。二樓為餐廳，不過其他樓層也還是挺好玩的。如果買了太空劇場的票，就可以直接進來這邊了。'+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow6 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker6 = new google.maps.Marker({
+    position: museum6,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker6.addListener('click', function() {
+    infowindow6.open(map, marker6);
+  });
+  
+          var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">人類文化廳</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>人類文化廳</b>，以世界文化、中國的科學文明及大洋洲為總主題。涵括中國醫藥、中國的科學與技術、農業生態、古代的中國人、漢人的心靈生活、大洋洲及台灣南島語族等七個主題。' +
+      '</p>'+
+      '<p>聽起來很好玩吧?但同時也是一個越逛越可怕的地方......'+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow7 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker7 = new google.maps.Marker({
+    position: museum7,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker7.addListener('click', function() {
+    infowindow7.open(map, marker7);
+  });
+  
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">環境劇場</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>環境劇場</b>，這裡是個360度的劇場(在地下室)，播的是暖化有關的影片。' +
+      '</p>'+
+      '<p>附近還有很多其它的劇場和劇場教室(超推鳥瞰劇場的)，每一個都很有趣，不過你不一定排的到就是了。'+
+      '不過這附近的google map有點錯誤，勤美才不是在這裡勒，也有一些人類文化廳的東西跑到這裡了。(人類擴張文化!?)</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow8 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker8 = new google.maps.Marker({
+    position: museum8,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker8.addListener('click', function() {
+    infowindow8.open(map, marker8);
+  });
+  
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">地球環境廳</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>地球環境廳</b>，這裡就是大王魷魚沉睡的位置了!!' +
+      '</p>'+
+      '<p>這區的展覽比較偏向自然相關。印象中應該是這裡，有個房間可以調投影機觀察各種昆蟲箱中的生物，最深刻的是有整箱滿滿的蟑螂和整箱滿滿的福壽螺。</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow9 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker9 = new google.maps.Marker({
+    position: museum9,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker9.addListener('click', function() {
+    infowindow9.open(map, marker9);
+  });
+  
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">DNA模型</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>超巨大的DNA模型</b>，莫名的漂亮。' +
+      '</p>'+
+      '<p>擁有天生的魅力，吸引小孩子去爬它......然而直到長大後才會發現，它其實禁止攀爬。不過現在此區在施工，進不去也看不到它。</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow10 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker10 = new google.maps.Marker({
+    position: museum10,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker10.addListener('click', function() {
+    infowindow10.open(map, marker10);
+  });
+  
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">自然學友之家與立體劇場</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>立體劇場</b>，一個老少皆宜、一定要去的地方!!票沒太空劇場貴，可惜影片最近幾年都久久才更新一次。' +
+      '</p>'+
+      '<p><b>自然學友之家</b>免費進入的地方，如果嫌旁邊商店無聊，又想吹冷氣學東西，那歡迎......小朋友進來玩!!'+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow11 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker11 = new google.maps.Marker({
+    position: museum11,
+    map: map,
+    title: 'museum (Ayers Rock)'
+  });
+  marker11.addListener('click', function() {
+    infowindow11.open(map, marker11);
   });
 }
 
