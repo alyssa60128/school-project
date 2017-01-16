@@ -98,6 +98,18 @@ function initMap() {
     infowindow.open(map, marker);
   });
 
+    var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">植物園</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>植物園</b>，科博館旁邊，為熱帶雨林的設計。' +
+      '進去要20元，有心學習的人會收穫良多；但無心學習的十分鐘就走出來，實在沒必要浪費那20塊錢啊。</p>'+
+      '<p>P.S.據說假日夜晚會有燈光秀，是情侶約會的勝地。'+
+      '</p>'+
+      '</div>'+
+      '</div>';
+	
   var infowindow2 = new google.maps.InfoWindow({
     content: contentString
   });
